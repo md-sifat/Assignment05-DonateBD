@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important FAQ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-start">
+    <div class="cont1 font-bold flex flex-row justify-around  py-5 w-full h-20 bg-gray-300 ">
+        <div class="btn">
+            <button class="bg-lime-400 px-7 py-3 border rounded hover:bg-lime-500"><a
+                    href="index.html">Home</a></button>
+        </div>
+        <div class="title flex ">
+            <img class="h-10" src="assets/logo.png" alt="">
+            <h2>Donate Bangladesh</h2>
+        </div>
+        <div class="amount flex">
+            <img class="h-10 mx-2" src="assets/coin.png" alt="">
+            <p class="amt">5500</p>
+            <span>BDT</span>
+        </div>
+    </div>
+    <div class="container mx-auto p-6 text-center">
+        <h1 class="text-4xl font-bold text-gray-800 mb-12">Important FAQ</h1>
+
+        <div class="w-full md:w-3/4 lg:w-1/2 mx-auto">
+            <div class="mb-6">
+                <button
+                    class="w-full text-left text-2xl font-semibold bg-blue-500 text-white py-4 px-6 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300"
+                    onclick="toggleFAQ(1)">
+                    1. What is JavaScript, and why is it important?
+                </button>
+                <div id="faq-1" class="collapse-content bg-white text-gray-700 rounded-lg mt-2">
+                    JavaScript is a programming language used to create dynamic and interactive web pages. It enables
+                    features like animations, form validation, and real-time content updates.
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <button
+                    class="w-full text-left text-2xl font-semibold bg-blue-500 text-white py-4 px-6 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300"
+                    onclick="toggleFAQ(2)">
+                    2. How does JavaScript interact with HTML and CSS?
+                </button>
+                <div id="faq-2" class="collapse-content bg-white text-gray-700 rounded-lg mt-2">
+                    JavaScript interacts with HTML and CSS by manipulating the Document Object Model (DOM). This allows
+                    developers to dynamically update content, styles, and behaviors on a webpage.
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <button
+                    class="w-full text-left text-2xl font-semibold bg-blue-500 text-white py-4 px-6 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300"
+                    onclick="toggleFAQ(3)">
+                    3. What are some common uses of JavaScript?
+                </button>
+                <div id="faq-3" class="collapse-content bg-white text-gray-700 rounded-lg mt-2">
+                    Common uses of JavaScript include form validation, creating interactive maps, developing single-page
+                    applications (SPAs), implementing animations, and building web-based games.
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <button
+                    class="w-full text-left text-2xl font-semibold bg-blue-500 text-white py-4 px-6 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300"
+                    onclick="toggleFAQ(4)">
+                    4. What is the difference between JavaScript and other programming languages?
+                </button>
+                <div id="faq-4" class="collapse-content bg-white text-gray-700 rounded-lg mt-2">
+                    Unlike many programming languages, JavaScript runs directly in the browser and does not require
+                    compilation. It is event-driven, making it ideal for creating interactive and responsive user
+                    experiences.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,3 +1,6 @@
+
+// the code is auto formatted 
+
 const donate = document.querySelector('.btn-donate');
 const history = document.querySelector('.btn-history');
 
@@ -88,10 +91,10 @@ function showPopup(message) {
 }
 
 
-function createHistory(title , val ){
+function createHistory(title, val) {
     const date = getCurrentDate();
     const newPost = document.createElement('div');
-    newPost.classList.add('border' , 'border-2' , 'border-black' , 'my-5' , 'py-5' , 'px-2');
+    newPost.classList.add('border', 'border-2', 'border-black', 'my-5', 'py-5', 'px-2');
     newPost.innerHTML = `
         <p>Ammount ${val} tk is  Donated to ${title}</p>
         <p>DATE : ${date}</p>
@@ -104,20 +107,36 @@ function createHistory(title , val ){
 function getCurrentDate() {
     const today = new Date();
     const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const day = daysOfWeek[today.getDay()]; 
-    const date = today.getDate().toString().padStart(2, '0'); 
-    const month = (today.getMonth() + 1).toString().padStart(2, '0'); 
-    const year = today.getFullYear(); 
+    const day = daysOfWeek[today.getDay()];
+    const date = today.getDate().toString().padStart(2, '0');
+    const month = (today.getMonth() + 1).toString().padStart(2, '0');
+    const year = today.getFullYear();
 
-    let hours = today.getHours(); 
-    const minutes = today.getMinutes().toString().padStart(2, '0'); 
-    const seconds = today.getSeconds().toString().padStart(2, '0'); 
-    const ampm = hours >= 12 ? 'PM' : 'AM'; 
+    let hours = today.getHours();
+    const minutes = today.getMinutes().toString().padStart(2, '0');
+    const seconds = today.getSeconds().toString().padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
 
-    hours = hours % 12 || 12; 
-    hours = hours.toString().padStart(2, '0'); 
+    hours = hours % 12 || 12;
+    hours = hours.toString().padStart(2, '0');
 
     const formattedDate = `${day}, ${date}-${month}-${year}`;
     const formattedTime = `${hours}:${minutes}:${seconds} ${ampm}`;
     return `${formattedDate} ${formattedTime}`;
+}
+
+
+// for the faq page js 
+
+function toggleFAQ(id) {
+    const content = document.getElementById(`faq-${id}`);
+    const allContents = document.querySelectorAll('.collapse-content');
+
+    allContents.forEach((item) => {
+        if (item !== content) {
+            item.classList.remove('open');
+        }
+    });
+
+    content.classList.toggle('open');
 }

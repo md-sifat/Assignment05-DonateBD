@@ -1,3 +1,13 @@
 .donate{
     height: 200vh;
 }
+.collapse-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 1rem;
+}
+.collapse-content.open {
+    max-height: 500px; 
+    padding: 1rem 1rem;
+}
