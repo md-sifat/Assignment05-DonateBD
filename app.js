@@ -27,3 +27,39 @@ history.addEventListener('click' , ()=>{
 });
 
 
+
+const totalAC = document.querySelector('.amt');
+let totalAmmount = document.querySelector('.amt').innerHTML;
+totalAmmount = parseInt(totalAmmount);
+console.log(totalAmmount);
+
+
+const submitbtn1 = document.querySelector('.submitD1');
+const submitbtn2 = document.querySelector('.submitD2');
+const submitbtn3 = document.querySelector('.submitD3');
+
+const in1 = document.querySelector('.in1');
+const in2 = document.querySelector('.in2');
+const in3 = document.querySelector('.in3');
+
+const val1 = document.querySelector('.value1');
+const val2 = document.querySelector('.value2');
+const val3 = document.querySelector('.value3');
+
+submitbtn1.addEventListener('click' , ()=>{
+    let val = in1.value;
+    console.log(val);
+    val = parseInt(val);
+    if(val>totalAmmount){
+        alert("Insufficient Balance");
+    }else if(val<totalAmmount){
+        totalAmmount-=val;
+        totalAC.innerHTML = totalAmmount;
+        let value1 = val1.innerHTML;
+        value1 = parseInt(value1);
+        value1+=val;
+        val1.innerHTML = value1;
+    }
+});
+
+
